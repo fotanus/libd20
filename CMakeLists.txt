@@ -18,7 +18,7 @@ include_directories("include/character/classes")
 get_property(inc_dirs DIRECTORY PROPERTY INCLUDE_DIRECTORIES)
 message("inc_dirs = ${inc_dirs}")
 
-add_library(d20 SHARED src/libd20.cpp)
+add_library(d20 SHARED src/character/character.cpp)
 
 install (TARGETS d20 DESTINATION bin)
 install (FILES "d20lib.h" DESTINATION include)
