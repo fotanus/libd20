@@ -1,0 +1,5 @@
+# temporary build folder
+_build
+
+# ctags
+tags
