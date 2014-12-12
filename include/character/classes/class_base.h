@@ -1,6 +1,9 @@
 namespace d20 {
     class ClassBase {
 		std::string name;
-		bool operator==(const ClassBase& other) const { return true;};
+
+		public:
+			virtual float bab_progression() const;
+			virtual std::string get_name() const;
     };
 }

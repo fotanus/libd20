@@ -1,10 +1,9 @@
 namespace d20 {
 	struct ClassHasher
 	{
-		std::size_t operator()(const ClassBase& k) const
+		std::size_t operator()(const ClassBase& c) const
 		{
-			// TODO: hashing for class base
-			return 1;
+			return c.get_name().size();
 		}
 	};
 }
