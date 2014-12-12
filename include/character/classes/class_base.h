@@ -1,3 +1,5 @@
+#include<string>
+
 namespace d20 {
     class ClassBase {
 		std::string name;
