@@ -18,7 +18,9 @@ include_directories("include/character/classes")
 
 get_property(inc_dirs DIRECTORY PROPERTY INCLUDE_DIRECTORIES)
 message("inc_dirs = ${inc_dirs}")
-add_library(d20 SHARED src/character/character.cpp src/character/classes/fighter.cpp)
+
+set(classes src/character/classes/class_base.cpp src/character/classes/fighter.cpp)
+add_library(d20 SHARED src/character/character.cpp ${classes})
 
 ## Tests ##
 enable_testing()
