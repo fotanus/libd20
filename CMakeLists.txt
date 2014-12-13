@@ -11,14 +11,19 @@ configure_file (
   "${PROJECT_BINARY_DIR}/config.h"
 )
 
+## Compile ##
 include_directories("include")
 include_directories("include/character")
 include_directories("include/character/classes")
 
 get_property(inc_dirs DIRECTORY PROPERTY INCLUDE_DIRECTORIES)
 message("inc_dirs = ${inc_dirs}")
-
 add_library(d20 SHARED src/character/character.cpp src/character/classes/fighter.cpp)
 
+## Tests ##
+enable_testing()
+add_subdirectory(tests)
+
+## Install ##
 install (TARGETS d20 DESTINATION bin)
 install (FILES "d20lib.h" DESTINATION include)

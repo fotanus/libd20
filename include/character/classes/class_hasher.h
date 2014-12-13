@@ -1,3 +1,5 @@
+#pragma once
+
 namespace d20 {
 	struct ClassHasher
 	{

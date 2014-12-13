@@ -1,3 +1,5 @@
+#pragma once
+
 #include "character/classes/class_base.h"
 
 namespace d20 {

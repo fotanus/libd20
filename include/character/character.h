@@ -1,3 +1,5 @@
+#pragma once
+
 #include<string>
 #include<unordered_map>
 #include "character/classes/class_base.h"
