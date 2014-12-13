@@ -19,6 +19,10 @@ namespace d20 {
 			Character(std::string name, Race *race, Class *cclass);
 			std::string get_name();
 			Race* get_race();
+			int get_class_level(Class *cclass);
+			int get_bab();
+			int get_ab();
+			int str_modifier();
 
 			int get_strength();
 			int get_dexterity();

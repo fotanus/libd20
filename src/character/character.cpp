@@ -1,4 +1,6 @@
+#include <math.h>
 #include "character.h"
+
 namespace d20 {
 	Character::Character(std::string name, Race *race, Class *cclass) {
 		this->name = name;
@@ -12,6 +14,32 @@ namespace d20 {
 
 	Race* Character::get_race() {
 		return this->race;
+	}
+
+	int Character::get_class_level(Class *cclass) {
+        std::unordered_map<Class*, int, ClassHasher>::const_iterator result;
+		result = this->classes.find(cclass);
+		if(result == this->classes.end()){
+			return 0;
+		} else {
+			return result->second;
+		}
+	}
+
+	int Character::get_bab() {
+		int bab = 0;
+		for(auto it = this->classes.begin(); it != this->classes.end(); ++it){
+			bab += trunc(it->first->bab_progression() * it->second);
+		}
+		return bab;
+	}
+
+	int Character::str_modifier() {
+		return (this->get_strength() - 10) / 2;
+	}
+
+	int Character::get_ab() {
+		return get_bab() + str_modifier();
 	}
 
 	int Character::get_strength() { return this->strength; }
