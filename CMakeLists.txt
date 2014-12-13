@@ -16,9 +16,6 @@ include_directories("include")
 include_directories("include/character")
 include_directories("include/character/classes")
 
-get_property(inc_dirs DIRECTORY PROPERTY INCLUDE_DIRECTORIES)
-message("inc_dirs = ${inc_dirs}")
-
 set(classes
 		src/character/classes/class.cpp
 		src/character/classes/fighter.cpp
