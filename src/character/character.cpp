@@ -17,8 +17,7 @@ namespace d20 {
 	}
 
 	int Character::get_class_level(Class *cclass) {
-        std::unordered_map<Class*, int, ClassHasher>::const_iterator result;
-		result = this->classes.find(cclass);
+		auto result = this->classes.find(cclass);
 		if(result == this->classes.end()){
 			return 0;
 		} else {
