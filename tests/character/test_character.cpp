@@ -8,5 +8,6 @@ int main() {
 	Character *character = new Character("John", john_race);
 	assert(character != NULL);
 	assert(character->get_name() == "John");
+	assert(character->get_constitution() == 10);
 	return 0;
 }
