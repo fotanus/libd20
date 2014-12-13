@@ -7,4 +7,8 @@ namespace d20 {
 	std::string Character::get_name() {
 		return this->name;
 	}
+
+	Race Character::get_race() {
+		return this->race;
+	}
 }
