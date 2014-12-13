@@ -1,8 +1,9 @@
 #include "character.h"
 namespace d20 {
-	Character::Character(std::string name, Race *race) {
+	Character::Character(std::string name, Race *race, Class *cclass) {
 		this->name = name;
 		this->race = race;
+		this->classes[cclass] = 1;
 	}
 
 	std::string Character::get_name() {

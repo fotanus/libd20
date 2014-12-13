@@ -10,13 +10,13 @@ namespace d20 {
     class Character {
         std::string name;
 		Race *race;
-        std::unordered_map<Class, int, ClassHasher> classes;
+        std::unordered_map<Class*, int, ClassHasher> classes;
 
 		int strength = 10, dexterity = 10, constitution = 10,
 			intelligence = 10, wisdom = 10, charisma = 10;
 
 		public:
-			Character(std::string name, Race *race);
+			Character(std::string name, Race *race, Class *cclass);
 			std::string get_name();
 			Race* get_race();
 
