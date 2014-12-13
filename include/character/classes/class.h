@@ -3,7 +3,7 @@
 #include<string>
 
 namespace d20 {
-    class ClassBase {
+    class Class {
 		std::string name;
 
 		public:
