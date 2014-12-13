@@ -15,6 +15,7 @@ configure_file (
 include_directories("include")
 include_directories("include/character")
 include_directories("include/character/classes")
+include_directories("include/character/races")
 
 set(classes
 		src/character/classes/class.cpp
@@ -23,6 +24,7 @@ set(classes
 
 set(races
 		src/character/races/race.cpp
+		src/character/races/human.cpp
 )
 
 add_library(d20 SHARED src/character/character.cpp ${classes} ${races})

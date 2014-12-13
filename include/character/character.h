@@ -11,11 +11,11 @@
 namespace d20 {
     class Character {
         std::string name;
-		Race race;
+		Race *race;
         std::unordered_map<Class, int, ClassHasher> classes;
 		public:
-			Character(std::string name);
+			Character(std::string name, Race *race);
 			std::string get_name();
-			Race get_race();
+			Race* get_race();
     };
 }
