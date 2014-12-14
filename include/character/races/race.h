@@ -4,7 +4,7 @@
 
 namespace d20 {
     class Race {
-		public:
-			virtual std::string get_name() const;
+        public:
+            virtual std::string get_name() const;
     };
 }
