@@ -41,17 +41,17 @@ namespace d20 {
         return get_bab() + str_modifier();
     }
 
-    int Character::get_strength() { return this->strength; }
-    int Character::get_dexterity() { return this->dexterity; }
-    int Character::get_constitution() { return this->constitution; }
-    int Character::get_intelligence() { return this->intelligence; }
-    int Character::get_wisdom() { return this->wisdom; }
-    int Character::get_charisma() { return this->charisma; }
+    int Character::get_strength() { return strength; }
+    int Character::get_dexterity() { return dexterity; }
+    int Character::get_constitution() { return constitution; }
+    int Character::get_intelligence() { return intelligence; }
+    int Character::get_wisdom() { return wisdom; }
+    int Character::get_charisma() { return charisma; }
 
-    void Character::set_strength(int value) { this->strength = value; }
-    void Character::set_dexterity(int value) { this->dexterity = value; }
-    void Character::set_constitution(int value) { this->constitution = value; }
-    void Character::set_intelligence(int value) { this->intelligence = value; }
-    void Character::set_wisdom(int value) { this->wisdom = value; }
-    void Character::set_charisma(int value) { this->charisma = value; }
+    void Character::set_strength(int value) { strength = value; }
+    void Character::set_dexterity(int value) { dexterity = value; }
+    void Character::set_constitution(int value) { constitution = value; }
+    void Character::set_intelligence(int value) { intelligence = value; }
+    void Character::set_wisdom(int value) { wisdom = value; }
+    void Character::set_charisma(int value) { charisma = value; }
 }
