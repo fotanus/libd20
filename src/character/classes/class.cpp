@@ -1,3 +1,4 @@
+#include <string>
 #include "character/classes/class.h"
 
 namespace d20 {
@@ -12,4 +13,4 @@ namespace d20 {
     std::string Class::get_name() const {
         throw("called get_name on class base!");
     }
-}
+}  // namespace d20

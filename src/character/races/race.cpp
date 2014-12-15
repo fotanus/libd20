@@ -1,3 +1,4 @@
+#include <string>
 #include "character/races/race.h"
 
 namespace d20 {

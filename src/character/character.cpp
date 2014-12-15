@@ -1,24 +1,26 @@
 #include <math.h>
-#include "character.h"
+#include <string>
+
+#include "character/character.h"
 
 namespace d20 {
     Character::Character(std::string name, Race *race, Class *cclass) {
         this->name = name;
         this->race = race;
-        this->classes[cclass] = 1;
+        classes[cclass] = 1;
     }
 
     std::string Character::get_name() {
-        return this->name;
+        return name;
     }
 
     Race* Character::get_race() {
-        return this->race;
+        return race;
     }
 
     int Character::get_class_level(Class *cclass) {
-        auto result = this->classes.find(cclass);
-        if(result == this->classes.end()){
+        auto result = classes.find(cclass);
+        if ( result == classes.end() ) {
             return 0;
         } else {
             return result->second;
@@ -27,14 +29,14 @@ namespace d20 {
 
     int Character::get_bab() {
         int bab = 0;
-        for(auto it = this->classes.begin(); it != this->classes.end(); ++it){
+        for ( auto it = classes.begin(); it != classes.end(); ++it ) {
             bab += trunc(it->first->bab_progression() * it->second);
         }
         return bab;
     }
 
     int Character::str_modifier() {
-        return (this->get_strength() - 10) / 2;
+        return (get_strength() - 10) / 2;
     }
 
     int Character::get_ab() {
@@ -54,4 +56,4 @@ namespace d20 {
     void Character::set_intelligence(int value) { intelligence = value; }
     void Character::set_wisdom(int value) { wisdom = value; }
     void Character::set_charisma(int value) { charisma = value; }
-}
+}  // namespace d20
