@@ -1,2 +1,2 @@
-include_directories(".")
+include_directories("test_include")
 add_subdirectory(character)

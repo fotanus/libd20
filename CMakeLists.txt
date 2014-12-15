@@ -6,10 +6,25 @@ set (VERSION_MINOR 1)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -Wextra -std=c++11")
 
-configure_file (
-  "${PROJECT_SOURCE_DIR}/config.h.in"
-  "${PROJECT_BINARY_DIR}/config.h"
-)
+## lint ##
+find_package(PythonInterp)
+if(PYTHONINTERP_FOUND)
+    set(filter -legal/copyright)
+    file(GLOB_RECURSE srcs src/*.cpp)
+    file(GLOB_RECURSE includes include/*.h)
+    file(GLOB_RECURSE tests tests/*.cpp)
+    execute_process(
+        COMMAND ${PYTHON_EXECUTABLE} ${CMAKE_SOURCE_DIR}/cpplint.py
+       --filter=${filter} ${srcs} ${includes} ${tests}
+       RESULT_VARIABLE cpplint_output
+    )
+    if(NOT "${cpplint_output}" STREQUAL "0")
+        message(FATAL_ERROR "cpplint failed with return value ${cpplint_output}")
+    endif()
+else()
+    message(WARNING "Python not found - not running lint check on code")
+endif()
+
 
 ## Compile ##
 include_directories("include")
