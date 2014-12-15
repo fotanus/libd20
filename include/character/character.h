@@ -2,15 +2,18 @@
 
 #include<string>
 #include<unordered_map>
+#include<vector>
 #include "character/races/race.h"
 #include "character/classes/class.h"
 #include "character/classes/class_hasher.h"
+#include "character/items/item.h"
 
 namespace d20 {
     class Character {
         std::string name;
         Race *race;
         std::unordered_map<Class*, int, ClassHasher> classes;
+        std::vector<Item> inventory;
 
         int strength = 10, dexterity = 10, constitution = 10,
             intelligence = 10, wisdom = 10, charisma = 10;
