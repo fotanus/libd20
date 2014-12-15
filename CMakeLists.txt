@@ -16,18 +16,23 @@ include_directories("include")
 include_directories("include/character")
 include_directories("include/character/classes")
 include_directories("include/character/races")
+include_directories("include/character/items")
 
 set(classes
-		src/character/classes/class.cpp
-		src/character/classes/fighter.cpp
+    src/character/classes/class.cpp
+    src/character/classes/fighter.cpp
 )
 
 set(races
-		src/character/races/race.cpp
-		src/character/races/human.cpp
+    src/character/races/race.cpp
+    src/character/races/human.cpp
 )
 
-add_library(d20 SHARED src/character/character.cpp ${classes} ${races})
+set(items
+    src/character/items/item.cpp
+)
+
+add_library(d20 SHARED src/character/character.cpp ${classes} ${races} ${items})
 
 ## Tests ##
 enable_testing()
