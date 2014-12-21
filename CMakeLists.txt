@@ -6,6 +6,10 @@ set (VERSION_MINOR 1)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -Wextra -std=c++11")
 
+if(POLICY CMP0042)
+    cmake_policy(SET CMP0042 NEW)
+endif()
+
 ## lint ##
 find_package(PythonInterp)
 if(PYTHONINTERP_FOUND)
