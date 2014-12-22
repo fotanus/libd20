@@ -26,6 +26,14 @@ namespace d20 {
         left_hand = item;
     }
 
+    HandItem* Character::get_right_hand() {
+        return right_hand;
+    }
+
+    void Character::equip_right_hand(HandItem *item) {
+        right_hand = item;
+    }
+
     int Character::get_class_level(Class *cclass) {
         auto result = classes.find(cclass);
         if ( result == classes.end() ) {

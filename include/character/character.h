@@ -20,6 +20,7 @@ class Character {
 
     std::vector<Item> inventory;
     HandItem* left_hand;
+    HandItem* right_hand;
 
     int strength = 10, dexterity = 10, constitution = 10,
         intelligence = 10, wisdom = 10, charisma = 10;
@@ -34,6 +35,8 @@ class Character {
 
     HandItem* get_left_hand();
     void equip_left_hand(HandItem *item);
+    HandItem* get_right_hand();
+    void equip_right_hand(HandItem *item);
 
 
     int str_modifier();
