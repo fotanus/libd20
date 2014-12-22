@@ -8,6 +8,7 @@
 #include "character/classes/class.h"
 #include "character/classes/class_hasher.h"
 #include "character/items/item.h"
+#include "character/items/hand_item.h"
 
 namespace d20 {
 
@@ -16,7 +17,9 @@ class Character {
     std::string name;
     Race *race;
     std::unordered_map<Class*, int, ClassHasher> classes;
+
     std::vector<Item> inventory;
+    HandItem* left_hand;
 
     int strength = 10, dexterity = 10, constitution = 10,
         intelligence = 10, wisdom = 10, charisma = 10;
@@ -28,6 +31,11 @@ class Character {
     int get_class_level(Class *cclass);
     int get_bab();
     int get_ab();
+
+    HandItem* get_left_hand();
+    void equip_left_hand(HandItem *item);
+
+
     int str_modifier();
 
     int get_strength();

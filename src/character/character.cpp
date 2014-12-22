@@ -18,6 +18,14 @@ namespace d20 {
         return race;
     }
 
+    HandItem* Character::get_left_hand() {
+        return left_hand;
+    }
+
+    void Character::equip_left_hand(HandItem *item) {
+        left_hand = item;
+    }
+
     int Character::get_class_level(Class *cclass) {
         auto result = classes.find(cclass);
         if ( result == classes.end() ) {

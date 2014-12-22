@@ -4,5 +4,8 @@
 #include "character/character.h"
 #include "character/classes/fighter.h"
 #include "character/races/human.h"
+#include "character/items/item.h"
+#include "character/items/weapons/weapon.h"
+#include "character/items/weapons/long_sword.h"
 
 #endif  // INCLUDE_D20LIB_H_

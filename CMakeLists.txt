@@ -36,6 +36,7 @@ include_directories("include/character")
 include_directories("include/character/classes")
 include_directories("include/character/races")
 include_directories("include/character/items")
+include_directories("include/character/items/weapons")
 
 set(classes
     src/character/classes/class.cpp
@@ -49,6 +50,8 @@ set(races
 
 set(items
     src/character/items/item.cpp
+    src/character/items/weapons/weapon.cpp
+    src/character/items/weapons/long_sword.cpp
 )
 
 add_library(d20 SHARED src/character/character.cpp ${classes} ${races} ${items})
