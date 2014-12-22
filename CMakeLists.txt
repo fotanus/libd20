@@ -35,9 +35,9 @@ include_directories("include")
 include_directories("include/character")
 include_directories("include/character/classes")
 include_directories("include/character/races")
-include_directories("include/character/items")
-include_directories("include/character/items/weapons")
-include_directories("include/character/items/shields")
+include_directories("include/items")
+include_directories("include/items/weapons")
+include_directories("include/items/shields")
 
 set(classes
     src/character/classes/class.cpp
@@ -50,11 +50,11 @@ set(races
 )
 
 set(items
-    src/character/items/item.cpp
-    src/character/items/weapons/weapon.cpp
-    src/character/items/weapons/long_sword.cpp
-    src/character/items/shields/shield.cpp
-    src/character/items/shields/large_shield.cpp
+    src/items/item.cpp
+    src/items/weapons/weapon.cpp
+    src/items/weapons/long_sword.cpp
+    src/items/shields/shield.cpp
+    src/items/shields/large_shield.cpp
 )
 
 add_library(d20 SHARED src/character/character.cpp ${classes} ${races} ${items})

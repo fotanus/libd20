@@ -7,8 +7,8 @@
 #include "character/races/race.h"
 #include "character/classes/class.h"
 #include "character/classes/class_hasher.h"
-#include "character/items/item.h"
-#include "character/items/hand_item.h"
+#include "items/item.h"
+#include "items/hand_item.h"
 
 namespace d20 {
 
