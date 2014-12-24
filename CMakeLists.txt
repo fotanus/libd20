@@ -47,6 +47,8 @@ set(classes
 set(races
     src/character/races/race.cpp
     src/character/races/human.cpp
+
+    src/character/races/sizes/size.cpp
 )
 
 set(items

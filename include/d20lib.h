@@ -4,6 +4,7 @@
 #include "character/character.h"
 #include "character/classes/fighter.h"
 #include "character/races/human.h"
+#include "character/races/sizes/size.h"
 #include "items/item.h"
 #include "items/weapons/weapon.h"
 #include "items/weapons/melee/melee_weapon.h"
