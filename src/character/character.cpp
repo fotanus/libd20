@@ -2,6 +2,7 @@
 #include <string>
 
 #include "character/character.h"
+#include "items/weapons/ranged/ranged_weapon.h"
 
 namespace d20 {
     Character::Character(std::string name, Race *race, Class *cclass) {
@@ -55,8 +56,16 @@ namespace d20 {
         return (get_strength() - 10) / 2;
     }
 
+    int Character::dex_modifier() {
+        return (get_dexterity() - 10) / 2;
+    }
+
     int Character::get_ab() {
-        return get_bab() + str_modifier();
+        if ( dynamic_cast<RangedWeapon*>(get_right_hand()) ) {
+            return get_bab() + dex_modifier();
+        } else {
+            return get_bab() + str_modifier();
+        }
     }
 
     int Character::get_strength() { return strength; }

@@ -40,6 +40,7 @@ class Character {
 
 
     int str_modifier();
+    int dex_modifier();
 
     int get_strength();
     int get_dexterity();
