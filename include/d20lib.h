@@ -6,7 +6,9 @@
 #include "character/races/human.h"
 #include "items/item.h"
 #include "items/weapons/weapon.h"
-#include "items/weapons/long_sword.h"
+#include "items/weapons/melee/melee_weapon.h"
+#include "items/weapons/melee/long_sword.h"
+#include "items/weapons/ranged/ranged_weapon.h"
 #include "items/shields/shield.h"
 #include "items/shields/large_shield.h"
 

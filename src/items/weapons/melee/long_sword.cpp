@@ -1,6 +1,6 @@
 #include <string>
 
-#include "items/weapons/long_sword.h"
+#include "items/weapons/melee/long_sword.h"
 
 namespace d20 {
 

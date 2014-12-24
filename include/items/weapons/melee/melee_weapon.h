@@ -1,5 +1,5 @@
-#ifndef INCLUDE_ITEMS_WEAPONS_LONG_SWORD_H_
-#define INCLUDE_ITEMS_WEAPONS_LONG_SWORD_H_
+#ifndef INCLUDE_ITEMS_WEAPONS_MELEE_MELEE_WEAPON_H_
+#define INCLUDE_ITEMS_WEAPONS_MELEE_MELEE_WEAPON_H_
 
 #include <string>
 
@@ -7,7 +7,7 @@
 
 namespace d20 {
 
-class LongSword : public Weapon {
+class MeleeWeapon : public Weapon {
  public:
     std::string get_name() const override;
     float get_volume() const override;
@@ -16,4 +16,4 @@ class LongSword : public Weapon {
 
 }
 
-#endif  // INCLUDE_ITEMS_WEAPONS_LONG_SWORD_H_
+#endif  // INCLUDE_ITEMS_WEAPONS_MELEE_MELEE_WEAPON_H_

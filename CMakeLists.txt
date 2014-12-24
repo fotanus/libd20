@@ -52,7 +52,9 @@ set(races
 set(items
     src/items/item.cpp
     src/items/weapons/weapon.cpp
-    src/items/weapons/long_sword.cpp
+    src/items/weapons/melee/melee_weapon.cpp
+    src/items/weapons/melee/long_sword.cpp
+    src/items/weapons/ranged/ranged_weapon.cpp
     src/items/shields/shield.cpp
     src/items/shields/large_shield.cpp
 )
