@@ -49,6 +49,15 @@ set(races
     src/character/races/human.cpp
 
     src/character/races/sizes/size.cpp
+    src/character/races/sizes/colossal.cpp
+    src/character/races/sizes/diminutive.cpp
+    src/character/races/sizes/fine.cpp
+    src/character/races/sizes/gargantuan.cpp
+    src/character/races/sizes/huge.cpp
+    src/character/races/sizes/large.cpp
+    src/character/races/sizes/medium.cpp
+    src/character/races/sizes/small.cpp
+    src/character/races/sizes/tiny.cpp
 )
 
 set(items
